@@ -11,52 +11,51 @@
 </head>
 <body>
     <header class="text-base">
-        <div class="conrainer bg-slate-300 p-3">
+        <div class="conrainer bg-slate-200 p-3">
             <div class="flex flex-wrap items-center justify-between">
                 <div class="logo w-[40px]">
                     <a href="index.html"><img src="images/b-cart logo.png" alt=""></a>
                 </div>
                 <nav>
                     <ul class="flex font-normal">
-                        <li><a href="#" class="mx-2">Home</a></li>
-                        <li><a href="#" class="mx-2">Product</a></li>
-                        <li><a href="#" class="mx-2">About</a></li>
+                        <li><a href="#" class="mx-3 text-myblue hover:text-white">Home</a></li>
+                        <li><a href="#" class="mx-3 text-myblue hover:text-white">Product</a></li>
+                        <li><a href="#" class="mx-3 text-myblue hover:text-white">About</a></li>
                     </ul>
                 </nav>
-                <div class="search">
-                    <label class="relative block">
-                        <span class="sr-only">Search</span>
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-                            <i class="fa-solid fa-magnifying-glass black"></i>
-                        </span>
-                        <input class="placeholder:text-sm block bg-transparent w-full border border-slate-500 rounded-md py-1 pl-9 pr-3 shadow-sm focus:outline-none focus:border-white placeholder:font-normal sm:text-sm" placeholder="Search" type="text" name="search"/>
-                      </label>
-                </div>
                 <div class="cart-items flex flex-wrap items-center">
-                    <a href=""><i class="fa-solid fa-cart-shopping mx-1 text-xl"></i></a>
-                    <a href=""><i class="fa-solid fa-circle-user ml-3 text-xl relative"></i></a>
-                    <div class="user absolute top-[65px] right-0 w-[250px] bg-slate-300 pl-4 pr-4 pb-4 pt-2">
+                    <div class="search">
+                        <label class="relative block mr-6">
+                            <span class="sr-only">Search</span>
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                                <i class="fa-solid fa-magnifying-glass text-myblue"></i>
+                            </span>
+                            <input class="placeholder:text-sm block bg-transparent w-full border border-myblue rounded-md py-1 pl-9 pr-3 shadow-sm focus:outline-none focus:border-white placeholder:font-normal sm:text-sm" placeholder="Search" type="text" name="search"/>
+                          </label>
+                    </div>
+                    <button><i class="fa-solid fa-cart-shopping mx-1 text-xl text-myblue hover:text-white"></i></button>
+                    <button id="user"><i class="fa-solid fa-circle-user ml-3 text-xl text-myblue relative hover:text-white z-10"></i></button>
+                    <button id="userclose" class="close"><i class="fa-solid fa-xmark ml-5 text-xl text-myblue relative hover:text-white z-10"></i></button>
+                    <div class="user-ops absolute top-[64px] right-0 w-[250px] bg-slate-200 pl-4 pr-4 pb-4 pt-2 rounded-md" id="user-list">
                         <div class="input flex text-center">
-                            <button class="mx-2 text-sm px-1 py-2 w-full bg-myblue m-3 rounded-md text-white">Sign Up</button>
-                            <button class="mx-2 text-sm px-1 py-2 w-full bg-myblue m-3 rounded-md text-white">Sign In</button>
+                            <button class="mx-2 text-sm px-1 py-2 w-full bg-myblue m-3 rounded-md text-white"><a href="./pages/signup.html">Sign Up</a></button>
+                            <button class="mx-2 text-sm px-1 py-2 w-full bg-myblue m-3 rounded-md text-white"><a href="">Sign In</a></button>
                         </div>
                         <div class="list">
                             <ul class="ml-2">
-                                <li><a href="#" class="text-sm">Orders</a></li>
-                                <li><a href="#" class="text-sm">Save Addresses</a></li>
-                                <li><a href="#" class="text-sm">Save Cards</a></li>
-                                <li><a href="#" class="text-sm">Contact Us</a></li>
+                                <li><a href="#" class="text-sm text-myblue hover:text-white">Orders</a></li>
+                                <li><a href="#" class="text-sm text-myblue hover:text-white">Save Addresses</a></li>
+                                <li><a href="#" class="text-sm text-myblue hover:text-white">Save Cards</a></li>
+                                <li><a href="#" class="text-sm text-myblue hover:text-white">Contact Us</a></li>
                             </ul>
-
                         </div>
                     </div>
                 </div>
-               
-                
             </div>
         </div>
     </header>
     
 </body>
 <script src="./javascript/cdn.tailwindcss.com_3.3.3"></script>
+<script src="./javascript/index.js"></script>
 </html>
