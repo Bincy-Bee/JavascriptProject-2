@@ -59,22 +59,27 @@ document.getElementById("signupform").addEventListener("submit",(e)=>{
         .then((data)=>{
             console.log(data)
             if (data.length > 0){
-                for (let i = 0; i < data.length ; i++){
-                    if (data[i].email == user.email){
-                        document.getElementById("emailalert").innerHTML ="Email already exist";
-                    }
-                    
+                if (data[0].email == user.email){
+                    document.getElementById("emailalert").innerHTML ="Email already exist";
+                    alert("Email Already Exist")
+                    setTimeout(() => {
+                        window.location.href="/pages/signin.html";
+                    }, 1000);
                 }
             }
             else{
-                fetch("http://localhost:8800/signup",{
-                method : "POST",
-                headers : {"Content-Type": "application/json"},
-                body : JSON.stringify(user)
-                })
-                // setTimeout(() => {
-                //     window.location.href="/pages/signin.html";
-                // }, 1000);
+                try {
+                    fetch("http://localhost:8800/signup",{
+                        method : "POST",
+                        headers : {"Content-Type": "application/json"},
+                        body : JSON.stringify(user)
+                        });
+                        localStorage.setItem("loggedIn", true);
+
+                } catch (error) {
+                    alert(error)
+                }
+                
             }
         })
     }
