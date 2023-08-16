@@ -9,6 +9,7 @@ body{
 :root{
     --blue: #044678;
     --orange :#F16844;
+    
 }
 .text-myblue{
     color: var(--blue);
@@ -46,7 +47,15 @@ header .user{
 
 /* Sign up Page */
 
-/* .signup-img img{
+.signup-img img{
     width: 100%;
     height: 100vh;
-} */
+    object-fit: cover;
+}
+
+.main-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

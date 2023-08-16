@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
     <style>
-        @import url(../css/style.css);
-        @import url(../css/all.min.css);
+      @import url(../css/style.css);
+      @import url(../css/all.min.css);
     </style>
-</head>
-<body>
-    <div class="signupform">
-        <div class="container">
-            <div class="flex flex-wrap">
-                <div class="w-[50%] h-screen">
-                    <div class="signup-img">
-                        <img src="../images/signup-bg.jpg" alt="">
-                    </div>
+  </head>
+  <body>
+    <div class="signupform bg-black">
+      <div class="main-box">
+        <div class="form-box w-[60%]">
+          <div>
+            <div class="flex">
+                <button class="py-1 px-2 rounded-md text-lg hover:text-white hover:bg-black text-white font-bold absolute top-2 right-2 z-50" id="backsignup"><i class="fa-solid fa-arrow-left-long"></i></button>
+              <div class="w-[50%]">
+                <div class="signup-img flex">
+                  <img src="../images/signup-2223.jpg" class="" alt="" />
                 </div>
-                <div class="w-[50%]">
-                    <form action="">
-                        <input type="text" placeholder="name">
-                    </form>
+              </div>
+              <div class="w-[50%] bg-white text-center">
+                <div class="logo w-[60px] text-center m-auto mt-8">
+                    <a href="#"><img src="../images/b-cart logo.png" alt=""></a>
                 </div>
+                <h2 class="font-normal text-myblue text-3xl my-5">Sign Up</h2>
+                <form class="px-5 text-left" id="signupform">
+                  <label for="name" class="block mb-2 font-bold text-myblue">Name</label>
+                  <input type="text" id="name" placeholder="Username" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-normal" >
+                  <p class="ml-2 text-red-500 font-bold mb-1" id="namealert"></p>
+
+                  <label for="enail" class="block mb-2 font-bold text-myblue">Email</label>
+                  <input type="email" id="email" placeholder="xxxxx@mail.com" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-normal" >
+                  <p class="ml-2 text-red-500 font-bold mb-1" id="emailalert"></p>
+
+                  <label for="password" class="block mb-2 font-bold text-myblue">Password</label>
+                  <input type="password" id="password" placeholder="Password" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-normal">
+                  <p class="ml-2 text-red-500 font-bold mb-1" id="passalert"></p>
+
+                  <label for="tel" class="block mb-2 font-bold text-myblue">Mo.No.</label>
+                  <input type="tel" id="tel" placeholder="Enter 10 Digit" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-normal">
+                  <p class="ml-2 text-red-500 font-bold mb-1" id="telalert" ></p>
+
+                <div class="text-center">
+                    <input type="submit" value="Sign Up" class="w-[30%] py-1 px-4 mt-8 mb-2 bg-sky-950 rounded-md text-white " id="signupsub">
+                </div>
+                </form>
+                <h3 class="my-2 text-xs">Already Sign Up ? <a href="./signin.html" class="underline underline-offset-4 font-black">Sign In</a></h3>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    
-</body>
+  </body>
+  <script src="../javascript/cdn.tailwindcss.com_3.3.3"></script>
+  <script src="../javascript/signup.js"></script>
 </html>

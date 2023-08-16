@@ -1,0 +1,32 @@
+{
+  "signup": [
+    {
+      "name": "Bhavin",
+      "email": "patelbhavin7784@gmail.com",
+      "password": "Bhavin@1234",
+      "tel": "9978847878",
+      "id": 1
+    },
+    {
+      "name": "Mohini",
+      "email": "mohini@gmail.com",
+      "password": "Mohini@7777",
+      "tel": "9978847878",
+      "id": 2
+    },
+    {
+      "name": "Viral",
+      "email": "viralpatel@gmail.com",
+      "password": "Viral@1211",
+      "tel": "9689747878",
+      "id": 3
+    },
+    {
+      "name": "raj",
+      "email": "raj@gmail.com",
+      "password": "Raj@2222",
+      "tel": "9874563321",
+      "id": 4
+    }
+  ]
+}
