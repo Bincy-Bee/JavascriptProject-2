@@ -10,18 +10,19 @@
     </style>
   </head>
   <body>
-    <div class="signinform bg-black">
+    <div id="navbar" ></div>
+    <div class="signinform bg-slate-200">
       <div class="main-box">
-        <div class="form-box w-[60%]">
+        <div class="form-box w-[80%] h[70%] m-auto shadow-2xl rounded-2xl overflow-hidden">
           <div>
             <div class="flex">
-                <button class="py-1 px-2 rounded-md text-lg hover:text-white hover:bg-black text-white font-bold absolute top-2 right-2 z-50" id="backsignin"><i class="fa-solid fa-arrow-left-long"></i></button>
-              <div class="w-[50%]">
+                <button class="py-1 px-2 rounded-full text-lg hover:text-white hover:bg-black text-white font-bold absolute top-14 right-3 z-50" id="backsignin"><i class="fa-solid fa-arrow-left-long"></i></button>
+              <div class="w-[55%]">
                 <div class="signup-img flex">
-                  <img src="../images/signup-2223.jpg" class="" alt="" />
+                  <img src="../images/bg-signup.jpg" class="" alt="" />
                 </div>
               </div>
-              <div class="w-[50%] bg-white text-center pt-20">
+              <div class="w-[45%] bg-white text-center pt-20">
                 <div class="logo w-[60px] text-center m-auto mt-8">
                     <a href="#"><img src="../images/b-cart logo.png" alt=""></a>
                 </div>
@@ -31,12 +32,20 @@
                   <input type="email" id="signinemail" placeholder="xxxxx@mail.com" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-medium placeholder:font-normal">
                   <p class="ml-2 text-red-500 font-bold mb-1" id="emailalert"></p>
 
+                  <div class="signpass">
                   <label for="password" class="block mb-2 font-bold text-myblue">Password</label>
+                  <label class="relative block">
+                    <span class="absolute inset-y-0 right-0 flex items-center pr-2 z-50">
+                      <i class="fa-regular fa-eye text-myblue " id="spassshow"></i>
+                      <i class="fa-regular fa-eye-slash text-myblue hidden" id="spasshide"></i>
+                    </span>
                   <input type="password" id="signinpassword" placeholder="Password" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-medium placeholder:font-normal">
+                  </label>
+                  </div>
                   <p class="ml-2 text-red-500 font-bold mb-1" id="passalert"></p>
 
                 <div class="text-center">
-                    <input type="submit" value="Sign In" class="w-[25%] py-1 px-4 mt-5 mb-2 bg-sky-950 rounded-md text-white ">
+                    <input type="submit" value="Sign In" class="w-[25%] py-1 px-4 mt-8 mb-2 bg-sky-950 rounded-md text-white ">
                 </div>
                 </form>
                 <h3 class="my-2 text-xs">Don't have an account ? please <a href="./signup.html" class="underline underline-offset-4 font-black">Sign Up</a></h3>
@@ -48,5 +57,5 @@
     </div>
   </body>
   <script src="../javascript/cdn.tailwindcss.com_3.3.3"></script>
-  <script src="../javascript/signin.js"></script>
+  <script src="../javascript/signin.js" type="module"></script>
 </html>

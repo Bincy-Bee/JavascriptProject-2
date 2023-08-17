@@ -10,18 +10,18 @@
     </style>
   </head>
   <body>
-    <div class="signupform bg-black">
+    <div id="navbar"></div>
+    <div class="signupform bg-slate-200">
       <div class="main-box">
-        <div class="form-box w-[60%]">
-          <div>
-            <div class="flex">
-                <button class="py-1 px-2 rounded-md text-lg hover:text-white hover:bg-black text-white font-bold absolute top-2 right-2 z-50" id="backsignup"><i class="fa-solid fa-arrow-left-long"></i></button>
-              <div class="w-[50%]">
+        <div class="form-box w-[80%] h[70%] m-auto shadow-2xl rounded-2xl overflow-hidden">
+            <div class="flex ">
+                <button class="py-1 px-2 rounded-full text-lg hover:text-white hover:bg-black text-white font-bold absolute top-14 right-3 z-50" id="backsignup"><i class="fa-solid fa-arrow-left-long"></i></button>
+              <div class="w-[55%]">
                 <div class="signup-img flex">
-                  <img src="../images/signup-2223.jpg" class="" alt="" />
+                  <img src="../images/bg-signup.jpg" class="" alt="" />
                 </div>
               </div>
-              <div class="w-[50%] bg-white text-center">
+              <div class="w-[45%] bg-white text-center">
                 <div class="logo w-[60px] text-center m-auto mt-8">
                     <a href="#"><img src="../images/b-cart logo.png" alt=""></a>
                 </div>
@@ -31,12 +31,20 @@
                   <input type="text" id="name" placeholder="Username" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-medium placeholder:font-medium" >
                   <p class="ml-2 text-red-500 font-bold mb-1" id="namealert"></p>
 
-                  <label for="enail" class="block mb-2 font-bold text-myblue">Email</label>
+                  <label for="email" class="block mb-2 font-bold text-myblue ">Email</label>
                   <input type="email" id="email" placeholder="xxxxx@mail.com" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-medium placeholder:font-medium" >
                   <p class="ml-2 text-red-500 font-bold mb-1" id="emailalert"></p>
 
+                  <div class="password">
                   <label for="password" class="block mb-2 font-bold text-myblue">Password</label>
+                  <label class="relative block">
+                    <span class="absolute inset-y-0 right-0 flex items-center pr-2 z-50">
+                      <i class="fa-regular fa-eye text-myblue " id="passshow"></i>
+                      <i class="fa-regular fa-eye-slash text-myblue hidden" id="passhide"></i>
+                    </span>
                   <input type="password" id="password" placeholder="Password" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-medium placeholder:font-medium">
+                  </label>
+                  </div>
                   <p class="ml-2 text-red-500 font-bold mb-1" id="passalert"></p>
 
                   <label for="tel" class="block mb-2 font-bold text-myblue">Mo.No.</label>
@@ -50,11 +58,10 @@
                 <h3 class="my-2 text-xs">Already Sign Up ? <a href="./signin.html" class="underline underline-offset-4 font-black">Sign In</a></h3>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
   </body>
   <script src="../javascript/cdn.tailwindcss.com_3.3.3"></script>
-  <script src="../javascript/signup.js"></script>
+  <script src="../javascript/signup.js" type="module"></script>
 </html>

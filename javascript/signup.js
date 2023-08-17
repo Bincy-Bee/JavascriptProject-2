@@ -1,4 +1,29 @@
+import nav from "../components/nav.js";
 
+document.getElementById("navbar").innerHTML = nav();
+
+const passshow=()=>{
+    document.getElementById("passshow").style.display="none";
+    document.getElementById("passhide").style.display="block";
+
+    let show = document.getElementById("password");
+    
+    if (show.type === "password"){
+        show.type = "text";
+    }
+    
+}
+const passhide = ()=>{
+    document.getElementById("passhide").style.display="none";
+    document.getElementById("passshow").style.display="block";
+    let hide = document.getElementById("password");
+
+    if(hide.type === "text"){
+        hide.type = "password";
+    }
+}
+document.getElementById("passshow").addEventListener("click", passshow);
+document.getElementById("passhide").addEventListener("click", passhide);
 
 document.getElementById("signupform").addEventListener("submit",(e)=>{
     e.preventDefault();

@@ -49,16 +49,17 @@ header .user{
 
 .signup-img img{
     width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    /* height: 100vh; */
+    /* object-fit: cover; */
 }
 
 .main-box{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
 }
+
 
 /* Banner Section   */
 .banner-bg{

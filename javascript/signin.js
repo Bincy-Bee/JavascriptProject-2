@@ -1,3 +1,30 @@
+import nav from "../components/nav.js";
+
+document.getElementById("navbar").innerHTML = nav();
+
+const passshow=()=>{
+    document.getElementById("spassshow").style.display="none";
+    document.getElementById("spasshide").style.display="block";
+
+    let show = document.getElementById("signinpassword");
+    
+    if (show.type === "password"){
+        show.type = "text";
+    }
+    
+}
+const passhide = ()=>{
+    document.getElementById("spasshide").style.display="none";
+    document.getElementById("spassshow").style.display="block";
+    let hide = document.getElementById("signinpassword");
+
+    if(hide.type === "text"){
+        hide.type = "password";
+    }
+}
+document.getElementById("spassshow").addEventListener("click", passshow);
+document.getElementById("spasshide").addEventListener("click", passhide);
+
 document.getElementById("backsignin").addEventListener("click",()=>{
     window.history.back();
 });
