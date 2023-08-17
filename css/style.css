@@ -59,3 +59,16 @@ header .user{
     align-items: center;
     height: 100vh;
 }
+
+/* Banner Section   */
+.banner-bg{
+    background-image: url(../images/banner-model-bg-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.overlay{
+    background-color: rgba(255, 255, 255, 0.288);
+    padding: 200px 0px;
+    height: 100vh;
+}
