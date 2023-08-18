@@ -1,6 +1,9 @@
 import nav from "../components/nav.js";
 
+
 document.getElementById("navbar").innerHTML = nav();
+document.getElementById("user").addEventListener("click",usershow);
+document.getElementById("userclose").addEventListener("click",userhide);
 
 const passshow=()=>{
     document.getElementById("spassshow").style.display="none";
