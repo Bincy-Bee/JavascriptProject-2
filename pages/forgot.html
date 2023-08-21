@@ -15,47 +15,18 @@
         <div class="text-center m-auto w-[30%] pt-10">
             <button class="py-1 px-2 rounded-full text-lg hover:text-white hover:bg-black text-myblue font-bold absolute top-14 right-3 z-50" id="backfor"><i class="fa-solid fa-arrow-left-long"></i></button>
             <form class="px-5 text-left" id="signinform">
+              
                 <label for="email" class="block mb-2 font-bold text-myblue">Email</label>
                 <input type="email" id="forcheckemail" placeholder="Enter your email" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-medium placeholder:font-normal">
                 <p class="ml-2 text-red-500 font-bold mb-1" id="emailalert"></p>
 
                 <div class="text-center">
-                    <input type="submit" value="Check" class="w-[25%] py-1 px-4 mt-8 mb-2 bg-sky-950 rounded-md text-white ">
+                    <input type="submit" value="Check" class="w-[25%] py-1 px-4 mt-8 mb-2 bg-sky-950 rounded-md text-white " id="check">
                 </div>
             </form>
-            <form class="px-5 text-left pt-6" id="passform">
-                <div class="forgotpass">
-                <label for="password" class="block mb-2 font-bold text-myblue">New Password</label>
-                <label class="relative block">
-                  <span class="absolute inset-y-0 right-0 flex items-center pr-2 z-50">
-                    <i class="fa-regular fa-eye text-myblue " id="fpassshow"></i>
-                    <i class="fa-regular fa-eye-slash text-myblue hidden" id="fpasshide"></i>
-                  </span>
-                <input type="password" id="newpassword" placeholder="Password" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-medium placeholder:font-normal">
-                </label>
-                </div>
-                <p class="ml-2 text-red-500 font-bold mb-1" id="passalert"></p>
-
-                <div class="forgotrepass">
-                    <label for="password" class="block mb-2 font-bold text-myblue">Re-Type New Password</label>
-                    <label class="relative block">
-                      <span class="absolute inset-y-0 right-0 flex items-center pr-2 z-50">
-                        <i class="fa-regular fa-eye text-myblue " id="refpassshow"></i>
-                        <i class="fa-regular fa-eye-slash text-myblue hidden" id="refpasshide"></i>
-                      </span>
-                    <input type="password" id="renewpassword" placeholder="Password" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-medium placeholder:font-normal">
-                    </label>
-                    </div>
-                    <p class="ml-2 text-red-500 font-bold mb-1" id="passalert"></p>
-    
-                <div class="text-center">
-                    <input type="submit" value="Done" class="w-[25%] py-1 px-4 mt-8 mb-2 bg-sky-950 rounded-md text-white ">
-                </div>
-              
-              </form>
         </div>
     </div>
   </body>
   <script src="../javascript/cdn.tailwindcss.com_3.3.3"></script>
-  <script src="../javascript/forgot.js" type="module"></script>
+  <script type="module" src="../javascript/forgot.js"></script>
 </html>

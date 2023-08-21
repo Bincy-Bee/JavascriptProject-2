@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>products</title>
+    <style>
+      @import url(../css/style.css);
+      @import url(../css/all.min.css);
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="mainbox w-full h-screen flex flex-wrap">
+        <div class="side1 w-[15%] bg-yellow-200 pt-1 pl-1 h-screen">
+            <div class="search pt-1 pl-1 mb-4">
+                <label class="relative block mr-6">
+                    <span class="sr-only">Search</span>
+                    <span class="absolute inset-y-0 right-0 flex items-center p-2 border border-slate-500 focus:border-sky-950 rounded-r-md">
+                        <i class="fa-solid fa-magnifying-glass text-myblue" id="search"></i>
+                    </span>
+                    <input class="placeholder:text-sm font-medium block bg-transparent w-full border border-slate-500 rounded-md py-1 pr-9 pl-2 shadow-sm focus:outline-none focus:border-sky-950 placeholder:font-medium sm:text-sm" placeholder="Search by title" type="text" id="s-input"/>
+                  </label>
+            </div>
+            <div class="btns-grp mb-4">
+                <fieldset class="text-myorange font-normal pl-1">Sort By Price</fieldset>
+                <button class="mx-2 text-sm px-1 py-1 px-2 bg-slate-600 hover:bg-sky-950 m-2 rounded-md text-white" id="lth">Low to High</button>
+                <button class="mx-2 text-sm px-1 py-1 px-2 bg-slate-600 hover:bg-sky-950 m-2 rounded-md text-white" id="htl">High to Low</button>
+            </div>
+            <div class="category mb-4">
+                <fieldset class="text-myorange font-normal pl-1">Sort By Category</fieldset>
+                <button class="mx-2 text-sm px-1 py-1 px-2 bg-slate-600 hover:bg-sky-950 m-2 rounded-md text-white" id="all">All</button><br>
+                <button class="mx-2 text-sm px-1 py-1 px-2 bg-slate-600 hover:bg-sky-950 m-2 rounded-md text-white" id="men">Men's Clothing</button><br>
+                <button class="mx-2 text-sm px-1 py-1 px-2 bg-slate-600 hover:bg-sky-950 m-2 rounded-md text-white" id="women">Women's clothing</button><br>
+                <button class="mx-2 text-sm px-1 py-1 px-2 bg-slate-600 hover:bg-sky-950 m-2 rounded-md text-white" id="elect">Electronics</button><br>
+                <button class="mx-2 text-sm px-1 py-1 px-2 bg-slate-600 hover:bg-sky-950 m-2 rounded-md text-white" id="jewel">Jewelery</button><br>
+            </div>
+        </div>
+        <div class="side2 w-[85%] pt-1 pl-1 border border-l-[1px] h-screen overflow-scroll">
+            <div id="productpage"></div>
+        </div>
+    </div>
+  </body>
+  <script src="../javascript/cdn.tailwindcss.com_3.3.3"></script>
+  <script type="module" src="../javascript/index.js"></script>
+  <script type="module" src="../javascript/products.js"></script>
+</html>

@@ -73,3 +73,29 @@ header .user{
     padding: 200px 0px;
     height: 100vh;
 }
+
+/* Products Page  */
+#productpage{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+#productpage div{
+    padding: 10px;
+    border:  1px solid black;
+    border-radius: 25px;
+    text-align: center;
+}
+#productpage div img{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+}
+ h2{
+    font-weight: bold;
+}
+#productpage div p{
+    font-size: 30px;
+}
