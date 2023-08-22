@@ -15,7 +15,7 @@ document.getElementById("signinform").addEventListener("submit",(e)=>{
             if(data.length > 0){
                 if(data[0].email == email){
                     alert("user found");
-                    sessionStorage.setItem("userforgot", JSON.stringify(data)); 
+                    localStorage.setItem("userforgot", JSON.stringify(data)); 
                     setTimeout(()=>{
                         window.location.href="/pages/password.html"
                     }, 1000)
@@ -25,4 +25,8 @@ document.getElementById("signinform").addEventListener("submit",(e)=>{
                 alert("Userdata Not found")
             }
         })
+});
+
+document.getElementById("backforgot").addEventListener("click",()=>{
+    window.history.back();
 })

@@ -15,15 +15,17 @@
       "id": 2
     },
     {
-      "newpass": "Viral@1592",
-      "repass": "Viral@1592",
+      "name": "Viral",
+      "email": "viralpatel@gmail.com",
+      "password": "Viral@1234",
+      "tel": "9898989898",
       "id": 3
     },
     {
-      "name": "raj",
-      "email": "raj@gmail.com",
-      "password": "Raj@2222",
-      "tel": "9874563321",
+      "name": "Raj",
+      "email": "rajpatel@gmail.com",
+      "password": "Raj@14785",
+      "tel": "9978447878",
       "id": 4
     }
   ]

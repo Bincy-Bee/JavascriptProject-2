@@ -1,12 +1,16 @@
 
-const usershow=()=>{
+const usershow=(e)=>{
+    e.preventDefault();
+
     document.getElementById("user-list").style.display="block";
     document.getElementById("userclose").style.display="block";
     document.getElementById("user").style.display="none";
 }
 document.getElementById("user").addEventListener("click",usershow);
 
-const userhide=()=>{
+const userhide=(e)=>{
+    e.preventDefault();
+    
     document.getElementById("user-list").style.display="none";
     document.getElementById("user").style.display="block";
     document.getElementById("userclose").style.display="none";
