@@ -50,10 +50,50 @@ const productpage =(data)=>{
             star.innerHTML = "*";
             star.style.color = "red";
         }
+        let btn = document.createElement("button");
+        btn.setAttribute("id","buynow");
+        btn.innerHTML = "Buy Now";
+
+        let btn2 = document.createElement("button");
+        btn2.setAttribute("id","addtocart")
+        btn2.innerHTML = "Add To Cart";
+        btn2.addEventListener("click",()=>{
+            let login = localStorage.getItem("loggedIn");
+
+            if (login){
+                fetch(`http://localhost:8800/cart?id=${item.id}`)
+                .then((res)=> res.json())
+                .then((data)=>{
+                    console.log(data);
+                    if(data.length > 0){
+                        alert("Products was added succesfully")
+
+                        data[0].qty = data[0].qty + 1;
+                        console.log(data[0].qty);
+                        fetch(`http://localhost:8800/cart/${data[0].id}`,{
+                            method : "PATCH",
+                            headers : {"content-type":"application/json"},
+                            body : JSON.stringify(...data)
+                        })
+                    }
+                    else{
+                        alert("add to your cart")
+                        fetch(`http://localhost:8800/cart`,{
+                            method : "POST",
+                            headers : {"content-Type":"application/json"},
+                            body : JSON.stringify({...item, qty : 1})
+                        })
+                    }
+                })
+            }
+            else{
+                window.location.href="/pages/signin.html";
+            }
+        })
 
         let div = document.createElement("div");
         
-        div.append(img, title, price, category, star);
+        div.append(img, title, price, category, star, btn, btn2);
         document.getElementById("productpage").append(div);
     })
 };
@@ -71,12 +111,10 @@ document.getElementById("lth").addEventListener("click", handellth);
 document.getElementById("htl").addEventListener("click", handelhtl);
 
 const handelcat =(cat)=>{
-    fetch(`https://fakestoreapi.com/products`)
+    fetch(`http://localhost:8800/products`)
     .then((res)=> res.json())
     .then((data)=>{
-        console.log(data);
          let val = data.filter((item)=> item.category == cat);
-         console.log(val);
          productpage(val);
     })
 }
@@ -104,7 +142,7 @@ document.getElementById("s-input").addEventListener("input",()=>{
 
 const get = async()=>{
 
-    fetch(`https://fakestoreapi.com/products`)
+    fetch(`http://localhost:8800/products`)
     .then((res)=> res.json())
     .then((pros)=>{
         products = pros;
