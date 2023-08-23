@@ -2,10 +2,27 @@ import nav from "../components/nav.js";
 
 document.getElementById("navbar").innerHTML = nav();
 
-const cartdisplay =(data)=>{
-    console.log(data)
-    data.map((item)=>{
+const usershow=()=>{
+    document.getElementById("user-list").style.display="block";
+    document.getElementById("userclose").style.display="block";
+    document.getElementById("user").style.display="none";
+}
+document.getElementById("user").addEventListener("click",usershow);
 
+const userhide=()=>{
+    document.getElementById("user-list").style.display="none";
+    document.getElementById("user").style.display="block";
+    document.getElementById("userclose").style.display="none";
+}
+document.getElementById("userclose").addEventListener("click",userhide);
+
+const cartdisplay =(data)=>{
+
+    let sum = 0;
+    let qtysum = 0;
+    data.map((item)=>{
+        sum = sum + (item.qty * item.price);
+        qtysum = qtysum + (item.qty);
         let tr = document.createElement("tr");
 
         let td1 = document.createElement("td");
@@ -90,7 +107,9 @@ const cartdisplay =(data)=>{
 
         document.getElementById("cartpage").append(tr);
 
-    })
+    });
+    document.getElementById("totalqty").innerHTML = qtysum;
+    document.getElementById("totalsum").innerHTML = sum;
 }
 
 const cartproductdelet =(id)=>{
