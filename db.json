@@ -3,7 +3,7 @@
     {
       "name": "Bhavin",
       "email": "patelbhavin7784@gmail.com",
-      "password": "Bhavin@1234",
+      "password": "Bhavin@2222",
       "tel": "9978847878",
       "id": 1
     },
@@ -17,14 +17,14 @@
     {
       "name": "Viral",
       "email": "viralpatel@gmail.com",
-      "password": "Viral@1234",
+      "password": "Viral@1111",
       "tel": "9898989898",
       "id": 3
     },
     {
       "name": "Raj",
       "email": "rajpatel@gmail.com",
-      "password": "Raj@14785",
+      "password": "Raj@2512",
       "tel": "9978447878",
       "id": 4
     }

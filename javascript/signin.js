@@ -66,6 +66,7 @@ const login=(e)=>{
                         window.location.href="/index.html";
                     }, 1000);
                     localStorage.setItem("loggedIn", true);
+                    localStorage.setItem("userinfo", JSON.stringify(data))
                 }
                 else{
                     document.getElementById("passalert").innerHTML = "** Incorrect Password !!";

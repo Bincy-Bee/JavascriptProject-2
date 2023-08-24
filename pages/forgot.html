@@ -24,6 +24,36 @@
                     <input type="submit" value="Check" class="w-[25%] py-1 px-4 mt-8 mb-2 bg-sky-950 rounded-md text-white " id="check">
                 </div>
             </form>
+            <form class="px-5 text-left pt-6 hidden" id="passform">
+              <div class="forgotpass">
+              <label for="password" class="block mb-2 font-bold text-myblue">New Password</label>
+              <label class="relative block">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-2 z-50">
+                  <i class="fa-regular fa-eye text-myblue " id="fpassshow"></i>
+                  <i class="fa-regular fa-eye-slash text-myblue hidden" id="fpasshide"></i>
+                </span>
+              <input type="password" id="newpassword" placeholder="Password" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-medium placeholder:font-normal">
+              </label>
+              </div>
+              <p class="ml-2 text-red-500 font-bold mb-1" id="passalert"></p>
+
+              <div class="forgotrepass">
+                  <label for="password" class="block mb-2 font-bold text-myblue">Re-Type New Password</label>
+                  <label class="relative block">
+                    <span class="absolute inset-y-0 right-0 flex items-center pr-2 z-50">
+                      <i class="fa-regular fa-eye text-myblue " id="refpassshow"></i>
+                      <i class="fa-regular fa-eye-slash text-myblue hidden" id="refpasshide"></i>
+                    </span>
+                  <input type="password" id="renewpassword" placeholder="Password" class="w-full border border-myblue pl-2 rounded-md py-1 placeholder:text-myblue font-medium placeholder:font-normal">
+                  </label>
+                  </div>
+                  <p class="ml-2 text-red-500 font-bold mb-1" id="repassalert"></p>
+  
+              <div class="text-center">
+                  <input type="submit" value="Done" class="w-[25%] py-1 px-4 mt-8 mb-2 bg-sky-950 rounded-md text-white ">
+              </div>
+            
+            </form>
         </div>
     </div>
   </body>
