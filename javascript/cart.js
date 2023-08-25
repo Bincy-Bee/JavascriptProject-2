@@ -54,10 +54,13 @@ const userhide=()=>{
 }
 document.getElementById("userclose").addEventListener("click",userhide);
 
+let sum = 0;
+let qtysum = 0;
 const cartdisplay =(data)=>{
 
-    let sum = 0;
-    let qtysum = 0;
+    // let sum = 0;
+    // let qtysum = 0;
+    
     data.map((item)=>{
         sum = sum + (item.qty * item.price);
         qtysum = qtysum + (item.qty);
@@ -91,23 +94,25 @@ const cartdisplay =(data)=>{
         btn1.innerHTML= "-";
         btn1.setAttribute("id","minus");
         btn1.addEventListener("click",()=>{
-            fetch(`http://localhost:8800/cart/${item.id}?${item.qty}`)
+            fetch(`http://localhost:8800/cart/${item.id}`)
             .then((res)=>res.json())
             .then((data)=>{
                 console.log(data);
                 if (data.qty > 0){
-                    data.qty = data.qty - 1;
-                    fetch(`http://localhost:8800/cart/${data.id}?${data.qty}`,{
-                        method : "PATCH",
-                        headers : {"content-Type": "application/json"},
-                        body : JSON.stringify({...data})
-                    })
-                }
-                else if (data.qty < 1){
-                    cartproductdelet(data.id);
+                    if(data.qty>1){
+                        data.qty = data.qty - 1;
+                        fetch(`http://localhost:8800/cart/${data.id}`,{
+                            method : "PATCH",
+                            headers : {"content-Type": "application/json"},
+                            body : JSON.stringify({...data})
+                        })
+                    }
+                    else{
+                        cartproductdelet(data.id);
+                    }
                 }
                 else{
-                    alert("pleasse add first")
+                    alert("pleasse add first");
                 }
             })
         })
@@ -119,14 +124,14 @@ const cartdisplay =(data)=>{
         td5.append(btn1,qty ,btn2);
         btn2.addEventListener("click",()=>{
 
-            fetch(`http://localhost:8800/cart/${item.id}?${item.qty}`)
+            fetch(`http://localhost:8800/cart/${item.id}`)
             .then((res)=> res.json())
             .then((data)=>{
                 console.log(data);
                 if (data.qty > 0){
                     data.qty = data.qty + 1;
                     console.log(data.qty);
-                    fetch(`http://localhost:8800/cart/${data.id}?${data.qty}`,{
+                    fetch(`http://localhost:8800/cart/${data.id}`,{
                         method : "PATCH",
                         headers : {"Content-Type": "application/json"},
                         body : JSON.stringify({...data})
@@ -146,6 +151,8 @@ const cartdisplay =(data)=>{
         document.getElementById("cartpage").append(tr);
 
     });
+    
+
     document.getElementById("totalqty").innerHTML = qtysum;
     document.getElementById("totalsum").innerHTML = sum.toFixed(2);
 }
@@ -154,7 +161,30 @@ const cartproductdelet =(id)=>{
     fetch(`http://localhost:8800/cart/${id}`,{
         method : "DELETE"
     })
+};
+const applycode = (cc)=>{
+    let code = document.getElementById("couponcode").value;
+    console.log(code)
+    if( code === "Select Option"){
+        alert("Select Opton");
+        document.getElementById("totalsum").innerHTML = sum.toFixed(2);
+    }
+    else if ( code === cc){
+        alert("cc")
+        document.getElementById("totalsum").innerHTML = (cc/100 * sum).toFixed(2);
+    }
+    else{
+        alert("no apply");
+        document.getElementById("totalsum").innerHTML = sum.toFixed(2);
+    }
+
 }
+
+document.getElementById("coupon").addEventListener("change",()=>{
+    let discount = document.getElementById("coupon").value;
+    let code = document.getElementById("couponcode").value = discount;
+    applycode(code);
+})
 
 const get = async()=>{
 
